@@ -3,5 +3,5 @@ from django.urls import path
 
 
 websocket_urlpatterns = [
-    path('conn/', consumer.Socket)
+    path('ws/conn/', consumer.SocketConnection)
 ]

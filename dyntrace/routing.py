@@ -5,9 +5,7 @@ import Django_Sockets_Test.listener.routing
 
 application = ProtocolTypeRouter({
     # Empty for now (http->django views is added by default)
-    'websocket': AuthMiddlewareStack(
-        URLRouter(
+    'websocket': URLRouter(
             Django_Sockets_Test.listener.routing.websocket_urlpatterns
         )
-    ),
 })
